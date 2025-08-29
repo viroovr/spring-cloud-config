@@ -12,6 +12,7 @@ department-service:
 #     health:
 #       show-details: always
 management:
-  endpoint:
-    exposure:
-      include: beans,env
+  endpoints:
+    web:
+      exposure:
+        include: beans,env
