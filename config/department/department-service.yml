@@ -20,6 +20,15 @@ springdoc:
     operations-sorter: method
   paths-to-match:
     - /api/v1/**
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: 
+      default-zone: "http://localhost:8761/eureka/"
 jwt:
   issuer: https://accounts.beyond.com
   secret: "{cipher}1778c61eef1962c089c40d1ec3e8c619737b54ef7c6a00cc09bf59f909038074b1191f687bf38bc299ff2ea22763da3a071df22e202efc2513053119786d6703"
+
