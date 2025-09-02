@@ -33,3 +33,12 @@ spring:
                 # 경로 재작성 필터로 요청 경로를 다른 경로로 변경한다.
               filters:
                 - RewritePath= /subject/(?<path>.*), /$\{path}
+            - id: professor-service
+                # 요청이 라우팅될 때 실제 서비스의 주소를 의미한다.
+              uri: lb://professor-service
+                # 라우팅 조건을 정의한다.
+              predicates:
+                - Path=/professor/**
+                # 경로 재작성 필터로 요청 경로를 다른 경로로 변경한다.
+              filters:
+                - RewritePath= /professor/(?<path>.*), /$\{path}
