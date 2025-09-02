@@ -12,3 +12,11 @@ mybatis:
   type-aliases-package: com.beyond.university.*.model.vo
   configuration:
     jdbc-type-for-null: NULL
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defalue-zone: http://localhost:8761/eureka/
