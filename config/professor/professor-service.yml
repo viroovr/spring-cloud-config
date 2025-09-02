@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: professor-service
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: "{cipher}df0f61f8e4662d00a976fb090917c6981253a6bfcd43a7f3432e4eb65cdd2f7f"
+    password: "{cipher}587085d0cb9d8563f19745e5204519a893853c4a96f876f32e69bd7fc9cc0da9"
+    url: jdbc:mariadb://localhost:3306/web
+mybatis:
+  mapper-locations:
+    - classpath:mappers/**/*.xml
+  type-aliases-package: com.beyond.university.*.model.vo
+  configuration:
+    jdbc-type-for-null: NULL
