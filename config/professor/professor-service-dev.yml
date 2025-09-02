@@ -1,0 +1,12 @@
+server:
+  port: 8090
+logging:
+  level:
+    '[org.springframework.web]': debug
+    '[org.mybatis]': debug
+    '[org.mariadb.jdbc.client.impl]': debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans,env
